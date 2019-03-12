@@ -7,5 +7,8 @@ window.$docsify = {
   auto2top: true,
   executeScript: true,
   homepage: 'README.md',
-  plugins: []
+  plugins: [],
+  requestHeaders: {
+    'Cache-Control': 'no-cache'
+  }
 };
