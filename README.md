@@ -40,7 +40,7 @@ All you need is a static webserver.  (One which can serve files from
 a root directory.  No logic is needed for the endpoints)
 
 One easily available solution is the HTTP server embedded in python.
-It can started from the command line like this:
+It can be started from the command line like this:
 
 ```sh
 # For python 3
