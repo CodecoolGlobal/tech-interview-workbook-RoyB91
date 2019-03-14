@@ -10,9 +10,9 @@
 
 ### Data structures
 
-#### How to find middle element of singly linked list in O(n)?
+#### How to find the middle element of singly linked list in O(n)?
 #### Given an array of integers going from 1 to 100 (both inclusive) there is a duplicated entry. How to find it?
-#### What is linked list? How to find if linked list has a loop?
+#### What is a linked list? How to find if a linked list has a loop?
 #### What is the Big O time complexity of the common operations in an ArrayList, LinkedList, HashMap? And of a bubble sort, quicksort, finding items in a Binary Search tree?
 #### How does HashMap work?
 #### Why is it important for keys in a map to have an immutable type? (Consider String for example.)
