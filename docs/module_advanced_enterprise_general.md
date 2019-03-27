@@ -52,8 +52,6 @@
 ### Algorithms
 #### What is QuickSort? Describe the main logic of this sorting algorithm.
 
-What is the difference between HTML and XML?
-
 ## Software design
 
 ### Security

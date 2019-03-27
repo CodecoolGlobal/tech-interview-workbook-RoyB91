@@ -87,6 +87,7 @@
 #### What are UX and UI?
 #### Please list some points that an application should fulfill to have good UX.
 #### What is XML, XSLT, DTD?
+#### What is the difference between HTML and XML?
 
 ### Javascript
 
