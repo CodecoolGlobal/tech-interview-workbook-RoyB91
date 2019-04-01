@@ -1,6 +1,30 @@
-# TODO How to work on this repo
+# Tech interview workbook
 
-# About markdown (the format of questions and answers)
+## What is this about?
+
+Tech interview workbook is the basis of the preparation for the tech interview. We gathered questions you could expect on real tech interviews (and therefore on the trial tech interview in the advanced module).
+
+During your Journey throughout Codecoool your job is to fill the answers in your own workbook. We believe that thinking about, and writing the the answers will help you to understand the material better than reading those in a book.
+
+Questions are separated to modules. When finishing a module, the questions in the relavant module should be answered, **this is a prerequirement for a PA** (meaning you can't get a GO on a PA, if you haven't answered all the module level questions with a valid git history).
+
+## How to work on this repo
+
+### Creating your workbook
+
+In the progbasics module, after getting a bit familiar with Git, go to GitHub Classroom, and accept this invitation: https://classroom.github.com/a/xQyty59A
+
+When the process finished, a brand new repository will be created based on this workbook, which is going to be your own Workbook. Clone it to your filesystem, and don't forget to push your changes every now and then.
+
+### Review process
+
+This very workbook used to be in Google Docs in the very old times, where students collaboratively filled the answers. We believe that collaboration is a must, but we'd like to also increase the amount of personal work. 
+
+Collaboration should happen in the following way. In every module you have to find someone from the next module who'll review your modifications in your repository. People of the advanced module should find someone from the alumni, or someone from the module peers.
+
+The workbooks development should happen in git branches, merging those with pull requests (people in the progbasics room should ask their peers, they already know what git branching is about). Review comments should happen through Github's code review functionality.
+
+## About markdown (the format of questions and answers)
 
 [Markdown](https://daringfireball.net/projects/markdown/) is a lightweight plain textual format to author documents.
 You can have:
@@ -13,7 +37,7 @@ Actually even this document is written using markdown.  You can
 check it out for examples by opening it in your favorite text
 editor.
 
-## Some examples
+### Some examples
 
 A table:
 
@@ -34,7 +58,7 @@ class BestClassEver {
 }
 ```
 
-# How to check your work on localhost
+## How to check your work on localhost
 
 All you need is a static webserver.  (One which can serve files from
 a root directory.  No logic is needed for the endpoints)
@@ -46,5 +70,5 @@ It can be started from the command line like this:
 # For python 3
 # This starts a webserver on localhost:8080
 # Make sure to start it from this directory
-python -m http.server 8080
+python3 -m http.server 8080
 ```
