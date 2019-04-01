@@ -104,7 +104,7 @@
 #### Given two Java programs on two different machines. How can you communicate between the two? What are the possible ways?
 #### What is an annotation? What can be annotated and how? Show examples.
 
-### C#
+### C&#35;
 
 #### Explain the purpose of IL and how does it relate to CLR?
 #### What does “managed code” mean?
