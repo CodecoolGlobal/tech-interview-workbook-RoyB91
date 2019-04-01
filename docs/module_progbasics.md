@@ -1,25 +1,5 @@
 # Programming Basics questions
 
-## Software Development Methodologies
-
-#### What is the main goal of a retrospective meeting?
-
-## Software design
-
-### Clean code
-
-#### What does clean code mean?
-#### What steps do we usually do during a clean code refactoring?
-
-### Error handling
-
-#### What is exception handling?
-#### What are the basics of exception handling in Python?
-#### In which case should we catch an exception? Why?
-#### How can we handle an exception? What can we and should we do with an exception in the ‘except’ block?
-#### When do we use an if statement and when exception handling during programming?
-#### What does the else and finally statement in a try-except block in Python?
-
 ## Computer science
 
 ### Data structures
@@ -81,6 +61,26 @@
 #### Through what series of commands could you put a new file into a remote repository connected to your existing local repository?
 #### What does it mean atomic commits and descriptive commit messages?
 #### What’s the difference between git and GitHub?
+
+## Software design
+
+### Clean code
+
+#### What does clean code mean?
+#### What steps do we usually do during a clean code refactoring?
+
+### Error handling
+
+#### What is exception handling?
+#### What are the basics of exception handling in Python?
+#### In which case should we catch an exception? Why?
+#### How can we handle an exception? What can we and should we do with an exception in the ‘except’ block?
+#### When do we use an if statement and when exception handling during programming?
+#### What does the else and finally statement in a try-except block in Python?
+
+## Software Development Methodologies
+
+#### What is the main goal of a retrospective meeting?
 
 ## Programming environment
 
