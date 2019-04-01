@@ -24,7 +24,7 @@
 #### How do you use a dictionary in Python?
 #### What does it mean that an object is Immutable in Python?
 #### What is conditional expression in Python?
-#### What are different types of arguments in Python? (context: pass by value / pass by reference)
+#### What are different types of arguments in Python?
 #### What is variable shadowing? (context: variable scope)
 #### What happens if you try to delete/drop/add an item from a List, while you are iterating over it in Python?
 #### What happens if you try to add an item to the end of a List, while you are iterating over it in Python?
