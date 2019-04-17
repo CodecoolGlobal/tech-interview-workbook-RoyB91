@@ -10,12 +10,6 @@ Questions are separated to modules. When finishing a module, the questions in th
 
 ## How to work on this repo
 
-### Creating your workbook
-
-In the progbasics module, after getting a bit familiar with Git, go to GitHub Classroom, and accept this invitation: https://classroom.github.com/a/xQyty59A
-
-When the process finished, a brand new repository will be created based on this workbook, which is going to be your own Workbook. Clone it to your filesystem, and don't forget to push your changes every now and then.
-
 ### Review process
 
 This very workbook used to be in Google Docs in the very old times, where students collaboratively filled the answers. We believe that collaboration is a must, but we'd like to also increase the amount of personal work. 
