@@ -24,6 +24,19 @@ Faster method for look for,
 ### Algorithms
 
 #### Fibonacci sequences. Write a method(or pseudo code), that generates the Fibonacci sequences.
+```python
+def fibonacci(n):
+    a = 0
+    b = 1
+    for i in range(0, n):
+        temp = a
+        a = b
+        b = temp + b
+    return a
+    
+for c in range(0, 15):
+    print(fibonacci(c))  
+```       
 #### How do you find a max value in a list/array if you can’t use any built-in functions?
 #### What do we call an *in-place* sort?
 
