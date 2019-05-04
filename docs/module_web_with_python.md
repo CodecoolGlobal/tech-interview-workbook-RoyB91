@@ -112,22 +112,155 @@ by including malicious code in a legitimate web page or web application.
 | Delete operation is called pop operation.  |  Delete operation is called dequeue operation. |
 | In stacks we maintain only one pointer to access the list, called the top(last element)  | In queues we maintain two pointers to access the list(first/last position  |
 #### What is BubbleSort? Describe the main logic of this sorting algorithm.
+>Bubble Sort is a sorting algorithm that works by repeatedly
+swapping the adjacent elements if they are in wrong order.(it compare each pair of adjacent elements of the list )
 #### Explain the process of finding the maximum and minimum value in a list of numbers!
+>If array is sorted, that's the best you're going to get. If it is sorted,
+ just take the first and last elements.
 #### Explain the process of calculating the average value in an array of numbers!
+>The sum of the numbers(of the array) divided by the number of values.
 #### What is Big O complexity? Explain time and space complexity!
+>Big O Notation is the language we use for talking about how long an algorithm takes to run.
+ It is how we compare the efficiency of different approaches to a problem.
+- how quickly the runtime grows : use Big O Notation to talk about how quickly the runtime grows.
+
+- relative to the input :  With Big O Notation, we use the size of the input, which we call “n”. So we can say things like the runtime grows “on the order of the size of the input” (O(n))
+ or “on the order of the square of the size of the input” (O(n²)).
+
+
+- as the input gets larger : we care more about the stuff that grows fastest as the input grows,
+ because everything else is quickly eclipsed as n gets very large.
 #### Explain the process of calculating the average value in a linked list of numbers!
 
+    sum all of the data values and divide by the number of nodes in the list.
+
 ### Procedural
+
 #### How the CASE condition works in SQL?
+>The CASE statement goes through conditions and returns a value when the first condition is met.
+
+>>So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause.
 #### How the switch-case condition works in JavaScript?
+>The switch statement is used to perform different actions based on different conditions.
+
+>>Use the switch statement to select one of many code blocks to be executed.
+
 #### How to achieve a switch-case-like structure in Python?
+>The Pythonic way to implement switch statement is to use the powerful dictionary mappings, also known as associative arrays,
+ that provide simple one-to-one key-value mappings.
+ ````python
+def switch_demo(argument):
+    switcher = {
+        1: "January",
+        2: "February",
+        3: "March",
+        4: "April",
+        5: "May",
+        6: "June",
+        7: "July",
+        8: "August",
+        9: "September",
+        10: "October",
+        11: "November",
+        12: "December"
+    }
+    print(switcher.get(argument, "Invalid month")) # Invalid month is default if number not found
+ ````
 #### Explain variable scoping in Python!
+    LEGB Rule.
+
+    L, Local — Names assigned in any way within a function (def or lambda)),
+    and not declared global in that function.
+    
+    E, Enclosing-function locals — Name in the local scope of any and
+    all statically enclosing functions (def or lambda), from inner to outer.
+    
+    G, Global (module) — Names assigned at the top-level of a module file,
+    or by executing a global statement in a def within the file.
+    
+    B, Built-in (Python) — Names preassigned in the built-in names module : open,range,SyntaxError,...
+    
+    example:
+```python
+code1
+class Foo:
+   code2
+   def spam.....
+      code3
+      for code4..:
+       code5
+       x()
+```
+    The for loop does not have its own namespace. In LEGB order, the scopes would be
+    
+    L : local, in def spam (in code3, code 4, code5).
+    
+    E : Enclosed function, any enclosing functions (if the whole example were in another def)
+    
+    G : Global. Were there any x declared globally in the module (code1)?
+    
+    B : Any builtin x in Python.
+    
+    x will never be found in code2
 #### What’s the difference between const and var in JavaScript?
+>The const keyword creates a declaration that cannot be reassigned.
+WHERE u can reassign with var(+var is global scoped)
 #### How the list comprehension looks like in Python?
+```python
+# You can either use loops:
+squares = []
+
+for x in range(10):
+    squares.append(x**2)
+ 
+print(squares)
+#result: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+# Or you can use list comprehensions to get the same result:
+squares = [x**2 for x in range(10)]
+
+print(squares)
+#result: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]     
+```
 #### How the “ternary expression” looks like in Python?
+```python
+a = val_if_true if test else val_if_false
+```
+    in action:
+```python
+d = {'a': 'x', 'b': 'y', 'c': 'x'}
+
+def has_unique_value(k):
+    return d.values().count(d[k]) == 1
+
+def keys_with_same_value_as_key(k):
+    return set([key for key in d.keys() if d[key] == d[k]])
+
+print( {d[k]:k if has_unique_value(k) else keys_with_same_value_as_key(k) for k in d.keys()} )
+```
 #### How the ternary expression looks like in JavaScript?
+    with if/else:
+```javascript
+if (person.age >= 16) {
+  person.driver = 'Yes';
+} else {
+  person.driver = 'No';
+}
+```
+    with tenary expression:
+```javascript
+person.driver = person.age >=16 ? 'Yes' : 'No';
+```
 #### How to import a function from another module in Python?
+```python
+    from a import b, c
+```
 #### How to import a function from another module in JavaScript?
+```javascript
+    import "my-module.js";
+    import myModule from "my-module.js";
+    import {reallyReallyLongModuleMemberName as shortName} from "my-module.js";
+```
 
 ### Functional
 #### What is recursion?
