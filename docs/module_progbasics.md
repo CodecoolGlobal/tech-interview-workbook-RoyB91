@@ -39,7 +39,6 @@ for c in range(0, 15):
 ```       
 #### How do you find a max value in a list/array if you can’t use any built-in functions?
 #### What do we call an *in-place* sort?
-
 ### Programming paradigms - procedural
 
 #### What is “Stack overflow”? Write a code, that ends up with stack overflow. What is the call stack?
