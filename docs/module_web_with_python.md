@@ -88,9 +88,15 @@ by including malicious code in a legitimate web page or web application.
      it is a necessity to decrypt the resulting message.
      for example: send a secure messages to someone on the other side of the world 
 #### What encryption methods do you know?
+    RSA:
+    RSA is considered an asymmetric algorithm due to its use of a pair of keys.
+    You’ve got your public key,which is what we use to encrypt our message,
+     and a private key to decrypt it
 #### What hashing methods do you know?
+    MD5(its already broken,easy to manipulate) , SHA-2(Secure Hash Algorithm),
 #### How/where would you store sensitive data (like db password, API key, ...) of your application?
-
+>I would rent a local storage(there are lot of companies who are offering local servers for these priceless information)
+ ,or if my company big enough build one.
 ## Computer science
 
 ### Algorithms
