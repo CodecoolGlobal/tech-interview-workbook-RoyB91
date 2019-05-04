@@ -47,11 +47,46 @@ database queries with bound, typed parameters and careful use of parameterized s
 >>>>Don’t use normal query, use Named query like this
 
 #### What is XSS? How to protect an application against it?
+    Cross-site Scripting (XSS)
+>Cross-site Scripting (XSS) is a client-side code injection attack. The attacker aims to execute malicious scripts in a web browser of the victim
+by including malicious code in a legitimate web page or web application.
+>>commonly used for Cross-site Scripting attacks are forums, message boards, and web pages that allow comments.
+    
+    To protect:
+>To protect against stored XSS attacks, make sure any dynamic content coming from the data store cannot be used
+ to inject JavaScript on a page.
+ >> - Whitelist Values
+ 
+ >> - HTTP-only Cookies : meaning that cookies will be received, stored, and sent by the browser, but cannot be modified or read by JavaScript.
+ 
+ >> - disallow the characters – especially < and > characters – from being rendered
 #### How to properly store passwords?
+>First of all you have to hash the password and store data information like that in the database.
+>>Secondly you need a good encrypt algorithm for that process.
+>>>Finally the best practise the you storing your database a specific local storage.(etc.)
 #### What is HTTPS?
+>Hypertext Transfer Protocol Secure (HTTPS) is an extension of the Hypertext Transfer Protocol (HTTP).
+ It is used for secure communication over a computer network, and is widely used on the Internet
+>>It protects against man-in-the-middle attacks. 
 #### What is encryption and decryption?
+>Encryption is the process of translating plain text data (plaintext) into something that appears to be random and meaningless (ciphertext).
+ >>Decryption is the process of converting ciphertext back to plaintext.
 #### What is hashing?
+>A hash function is where a computer takes an input of any length and content (e.g. letters, numbers, and symbols) and
+ uses a mathematical formula to chop it, mix it up, and produce an output of a specific length. 
 #### What is the difference between encryption and hashing? When would you use which?
+>The key difference between encryption and hashing is that encrypted strings can be reversed back into their original
+ decrypted form if you have the right key.
+ 
+    Hashing:
+    Hashing is an ideal way to store passwords,
+    as hashes are inherently one-way in their nature.
+    + salt
+    
+    Encryption:
+    Encryption should only ever be used over hashing when
+     it is a necessity to decrypt the resulting message.
+     for example: send a secure messages to someone on the other side of the world 
 #### What encryption methods do you know?
 #### What hashing methods do you know?
 #### How/where would you store sensitive data (like db password, API key, ...) of your application?
