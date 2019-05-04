@@ -364,16 +364,96 @@ you start your next, then at some point, say "wait for this to finish". It's mor
 ### SQL
 
 #### How can you connect your application to a database server? What are the possible ways?
+>Everything On One Server
+
+- The entire environment resides on a single server. For a typical web application,
+ that would include the web server, application server, and database server
+>Separate Database Server
+
+- The database management system (DBMS) can be separated from the rest of the environment to eliminate the resource
+ contention between the application and the database, and to increase security
+
 #### When do you use the DISTINCT keyword in SQL?
+> When u don't want a duplicate in a query.
 #### What are aggregate functions in SQL? Give 3 examples.
+    An aggregate function allows you to perform a calculation
+    on a set of values to return a single scalar value.
+        - AVG – calculates the average of a set of values.
+        - COUNT – counts rows in a specified table or view.
+        - MIN
+        - MAX
+        - SUM
 #### What kind of JOIN types do you know in SQL? Could you give examples?
+    Inner Join:(returns records at the intersection of the two tables.)
+```postgresql
+select first_name, last_name, order_date, order_amount
+from customers c
+inner join orders o
+on c.customer_id = o.customer_id
+```
+    Left Join:(A left join returns all records from table A and any matching records from table B.)
+```postgresql
+
+select first_name, last_name, order_date, order_amount
+from customers c
+left join orders o
+on c.customer_id = o.customer_id
+```
+    Right Join:(Right join is a mirror version of the left join and allows to get a list of all orders, appended with customer information.)
+    
+    Full Join:(Finally, for a list of all records from both tables, we can use a full join.)
 #### What are the constraints in sql?
+>>SQL constraints are used to specify rules for data in a table.
+
+- NOT NULL - Ensures that a column cannot have a NULL value
+- UNIQUE - Ensures that all values in a column are different
+- PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+- FOREIGN KEY - Uniquely identifies a row/record in another table
 #### What is a cursor in SQL? Why would you use one?
+>A cursor is a temporary work area created in the system memory when a SQL statement is executed. A cursor contains information on a select statement and the rows of data accessed by it.
+This temporary work area is used to store the data retrieved from the database, and manipulate this data. A cursor can hold more than one row, but can process only one row at a time. The set of rows the cursor holds is called the active set.
 #### What are database indexes? When to use?
+>A database index is a data structure that improves the speed of data retrieval operations on a database table at the cost of additional writes and storage space to maintain the index data structure.
+Indexes are used to quickly locate data without having to search every row in a database table
 #### What are database transactions? When to use?
+>A transaction is a unit of work that you want to treat as "a whole." It has to either happen in full or not at all.
+
+>A classical example is transferring money from one bank account to another. To do that you have first to withdraw the amount from the source account, and then deposit it to the destination account. The operation has to succeed in full. If you stop halfway, the money will be lost, and that is Very Bad.
+
+>In modern databases transactions also do some other things - like ensure that you can't access data that another person has written halfway. But the basic idea is the same - transactions are there to ensure, that no matter what happens, the data you work with will be in a sensible state. They guarantee that there will NOT be a situation where money is withdrawn from one account, but not deposited to another.
+
+
 #### What kind of database relations do you know? How to define them?
+    One-to-One:
+    
+    A row in table A can have only one matching row in table B, and vice versa.
+
+
+
+    One-to-Many (or Many-to-One):
+    
+    This is the most common relationship type. In this type of relationship,
+    a row in table A can have many matching rows in table B,
+    but a row in table B can have only one matching row in table A.
+    (Each customer can only be assigned one city,. One city can be assigned to many customers.)
+    
+   
+    
+    Many-to-Many
+    
+    A many-to-many relationship could be thought of as two one-to-many relationships,
+    linked by an intermediary table( “cross-reference table”).
+    (So in order to create a many-to-many relationship between the Customers table and the Products table,
+    we created a new table called Orders.)
+           
 #### You have a table with an “address” field which contains data like “3525, Miskolc, Régiposta 9.” (postcode, city, street name and address). How would you query all records related to Miskolc?
+```postgresql
+select * table
+where address like "%Miskolc%"
+```
 #### How would you keep track of what kind of data has changed after an UPDATE or DELETE operation in a table?
+>I would create a person_log table and create a trigger on  that will insert a row into person_log table
+ whenever the table/s row/s get updated/deletes/added
 
 ### HTML & CSS
 
