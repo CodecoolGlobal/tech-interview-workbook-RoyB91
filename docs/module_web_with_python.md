@@ -5,15 +5,47 @@
 ### Clean code
 
 #### Point out 5 suggestions, how to format an SQL query!
+>Indentation helps keep your query clean by identifying where each block of code begins.
+ This makes program structure more understandable.
+ 
+ >Explain Yourself with Comments.
+ 
+ >It is also very important to use a single naming convention for tables, columns, and queries.
+  This makes the code easier to write and read.
+  
+>Define SELECT Fields instead of SELECT *
+
+>Use WHERE instead of HAVING to Define Filters:
+>>Per the SQL Order of Operations, HAVING statements are calculated after WHERE statements. 
+If the intent is to filter a query based on conditions, a WHERE statement is more efficient.
 #### What layers can you name in a simple web application?
-
+    View
+    Application service
+    Database
+    Domain
 ### Error handling
+>Error handling refers to the response and recovery procedures
+>from error conditions present in a software application.
+>>Error handling helps in maintaining the normal flow of program execution.
 #### What error can occur, when an array does not have an element on the requested index?
+    IndexError
 #### What is the “finally” block, and how would you use it?
+>The finally block is as the name implies,
+ some code that you want to execute regardless of what happens.
+>>A classic example of try…catch…finally is database resource management.    
 #### Why should we catch special exception types?
-
+>Nothing is worse than an application crashing with some user unfriendly stacktrace dumped to the screen.
+ >>Not only does it give (perhaps unwanted) insight into your code,
+     but it also confuses your end-user, and sometimes even scares them away to a competing application.
 ### Security
 #### What is SQL injection? How to protect an application against it?
+>An SQL injection is a computer attack in which malicious code is embedded in a poorly-designed application
+ and then passed to the backend database
+>>You can prevent SQL Injection vulnerabilities in web applications by utilizing parameterized
+database queries with bound, typed parameters and careful use of parameterized stored procedures in the database.
+>>>Before substitute into query, we need to do the validation. for remove ir escaped the special character like single quote, key words like select, Union…
+>>>>Don’t use normal query, use Named query like this
+
 #### What is XSS? How to protect an application against it?
 #### How to properly store passwords?
 #### What is HTTPS?
