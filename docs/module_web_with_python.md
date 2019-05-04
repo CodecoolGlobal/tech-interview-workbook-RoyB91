@@ -95,13 +95,22 @@ by including malicious code in a legitimate web page or web application.
 #### What hashing methods do you know?
     MD5(its already broken,easy to manipulate) , SHA-2(Secure Hash Algorithm),
 #### How/where would you store sensitive data (like db password, API key, ...) of your application?
->I would rent a local storage(there are lot of companies who are offering local servers for these priceless information)
+>Of course i would encrypt it, or hash it first.
+
+>After that:
+>>I would rent a local storage(there are lot of companies who are offering local servers for these priceless information)
  ,or if my company big enough build one.
 ## Computer science
 
 ### Algorithms
 
 #### What is the difference between Stack and Queue data structure?
+|  STACKS | QUEUES  |
+|---|---|
+| Stacks are based on the LIFO principle, i.e., the element inserted at the last, is the first element to come out of the list.  | Queues are based on the FIFO principle, i.e., the element inserted at the first, is the first element to come out of the list.  |
+| Insert operation is called push operation.  | Insert operation is called enqueue operation.
+| Delete operation is called pop operation.  |  Delete operation is called dequeue operation. |
+| In stacks we maintain only one pointer to access the list, called the top(last element)  | In queues we maintain two pointers to access the list(first/last position  |
 #### What is BubbleSort? Describe the main logic of this sorting algorithm.
 #### Explain the process of finding the maximum and minimum value in a list of numbers!
 #### Explain the process of calculating the average value in an array of numbers!
