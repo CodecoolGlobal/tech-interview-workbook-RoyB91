@@ -748,25 +748,101 @@ This means they don't have to waste time figuring out the fine details of how li
 ### Networks
 
 #### What kind of HTTP status codes do you know?
+- 200   OK             
+- 301   Moved Permanently
+- 302   Found
+- 400   Bad Request
+- 403   Forbidden 
+- 404   Not Found 
+- 405   Method Not Allowed
+- 408   Request Timeout
+- 500   Internal Server Error
+- 504   Gateway Timeout
+
 #### What is a API?
+- API stands for Application Programming Interface.
+   - An API, or application programming interface, is essentially a way for apps to borrow functionality and data from each other.
+- An API is code, that allows two software programs to communicate with each other. One program can call another programs API to get access to data or functionality of the other program.
+- An API is the messenger that takes a request, tells a system what you want to do and then returns the response back to you!
 #### What is REST API?
+- A RESTful API is an application program interface (API) that uses HTTP requests to GET, PUT, POST and DELETE data.
 #### What is JSON? When to use?
 - JSON is short for JavaScript Object Notation, and is a way to store information in an organized, easy-to-access manner.
  In a nutshell, it gives us a human-readable collection of data that we can access in a really logical manner.
+ - ```JSON (in Javascript) is a string!```
+
 
 When to use it:
 - In short, you are forced to communicate things using key-value pairs and arrays.
 - for fast and and effective communication between server -user for example.
 #### What is TCP/IP? What layers does it define, what are they responsible for?
-#### What’s the difference between TCP and UDP?
-#### How does an HTTP Request look like? What are the most relevant HTTP header fields?
-#### How does an HTTP Response look like? What are the most relevant HTTP header fields?
-#### What is DNS? How does it work?
-#### What is a web server?
-#### Explain the client-server architecture.
-#### What would you use a session for?
-#### What would you use a cookie for?
+- Transmission Control Protocol/Internet Protocol (TCP/IP) is the language a computer uses to access the internet.
+ It consists of a suite of protocols designed to establish a network of networks to provide a host with access to the internet.
+(its like a set of rules to allow communicate each other)
 
+    
+**Layer**|**Primary function**|**Examples**
+:-----:|:-----:|:-----:
+Application|Do useful work|HTTP, SMTP, POP, Ping, FTP
+Transport|Control the flow of information between the application program running on the client and the application program running on the server|TCP (reliable), UDP (not reliable)
+Network|Route packets between networks (inter-network)|IP
+Data link|Move data within a local area network|Ethernet, ATM, PPP
+Physical|Define the physical characteristics of the communication hardware and medium|radio, twisted pair, fiber
+#### What’s the difference between TCP and UDP?
+>TCP (Transmission Control Protocol) is connection oriented, whereas UDP (User Datagram Protocol) is connection-less. This means that TCP tracks all data sent, requiring acknowledgment for each octet (generally). UDP does not use acknowledgments at all, and is usually used for protocols where a few lost datagrams do not matter.
+
+**TCP**|**UDP**
+:-----:|:-----:
+Reliable|Unreliable
+Connection-oriented|Connectionless
+Segment retransmission and flow control through windowing|No windowing or retransmission
+Segment sequencing|No sequencing
+Acknowledge sequencing|No acknowledgment  
+
+  
+#### How does an HTTP Request look like? What are the most relevant HTTP header fields?
+A simple request message from a client computer consists of the following components:
+
+- A request line to get a required resource, for example a request GET /content/page1.html is requesting a resource called /content/page1.html from the server.
+- Headers (Example – Accept-Language: EN).
+- An empty line.
+- A message body which is optional.
+- All the lines should end with a carriage return and line feed. The empty line should only contains carriage return and line feed without any spaces.
+
+#### How does an HTTP Response look like? What are the most relevant HTTP header fields?
+A simple response from the server contains the following components:
+
+- HTTP Status Code (For example HTTP/1.1 301 Moved Permanently, means the requested resource was permanently moved and redirecting to some other resource).
+- Headers (Example – Content-Type: html)
+- An empty line.
+- A message body which is optional.
+#### What is DNS? How does it work?
+Domain Name Servers (DNS) are the Internet's equivalent of a phone book.
+They maintain a directory of domain names and translate them to Internet Protocol (IP) addresses.
+#### What is a web server?
+A Web server is a program that uses HTTP (Hypertext Transfer Protocol) to serve the files that form Web pages to users, in response to their requests, which are forwarded by their computers' HTTP clients.
+Dedicated computers and appliances may be referred to as Web servers as well.
+#### Explain the client-server architecture.
+Client-server architecture, architecture of a computer network in which many clients (remote processors) request and
+receive service from a centralized server (host computer).
+>Client computers provide an interface to allow a computer user to request services of the server and to display the results the server returns. 
+#### What would you use a session for?
+The ````purpose for session```` is to store data that you (as the web application developer)
+```would like to have preserved across page loads```. Thus, you can set flags in your login script
+such as logged_in to check if the user is logged in, and on any
+other page check session['logged_in'] == true, instead of querying for that information.
+- Sessions use a cookie as a key of sorts, to associate with the data that is stored on the server side.
+- IDU is stored on server (i.e. server-side)
+- Safer (because of 1)
+- Expiration can not be set, session variables will be expired when users close the browser. 
+
+#### What would you use a cookie for?
+ You can save settings to cookie for the websites between visits.So its gonna remember your previous preferences.
+Cookies:
+
+- IDU is stored on web-browser (i.e. client-side)
+- Not very safe, since hackers can reach and get your information (because of 1)
+- Expiration can be set (see setcookies() for more information)
 ## Software Development Methodologies
 
 #### What kind of software development methodologies do you know? What are the main features of these?
