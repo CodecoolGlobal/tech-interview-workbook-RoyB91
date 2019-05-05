@@ -725,8 +725,26 @@ git push
 ### DevOps
 
 #### Why is it good to use a package manager software?
-#### Why is it good to use a virtual environment for a project?
+- They prevent mixing incompatible files/libraries. 
 
+- They establish a shared convention for managing libraries.(When new developers come onto your project, team, company, etc., they're likely to know the conventions of the package manager.
+This means they don't have to waste time figuring out the fine details of how libraries are managed in your code base.)
+
+- They give you a standard way of versioning and distributing your own dependencies and files that don't belong in your repository.
+
+- Some package managers provide additional features during installation. 
+
+- They tend to centralize hosting and distribution. 
+
+- Helps with complex dependency trees (and that can be managed downloading a dependency together with all its dependencies).
+
+- Packages contain metadata, such as the software's name, description of its purpose, version number, vendor, checksum,
+ and a list of dependencies necessary for the software to run properly
+ 
+ 
+#### Why is it good to use a virtual environment for a project?
+- Dependency Management: Prevent conflicts between dependencies of multiple projects.
+- Every project can have a single unique virtual environment with the specific packages. 
 ### Networks
 
 #### What kind of HTTP status codes do you know?
