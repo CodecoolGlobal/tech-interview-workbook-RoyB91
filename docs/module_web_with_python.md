@@ -693,11 +693,34 @@ How to use it:
 ### Version control
 
 #### What type of branching strategy would you use?
+I would use the GitHub Flow:
+
+    - Code in master is deployable at all times.
+    - When you want to start working on a new task, create a new branch off of master and give it a descriptive name.
+    - Commit to that branch locally and regularly send your work to the same-named branch on the server.
+    - Open a pull request when you feel your changes are ready to be merged (or even if you aren’t so sure, but would like some feedback).
+    - After the new feature is revised and approved, you can merge it into master.
+    - Once your changes are merged and pushed to the master, you can and should delete the branch.
+    
 #### What would you do if you find a bug on the production code (master branch)?
+I would report it to my project manager. And he/she would tell us how/who should fix it.
 #### How can you move changes from one branch to another in GIT?
+```git
+git branch checkout branchname
+```
 #### How does a VCS help with code reviews?
+- Modern version control systems are designed to help address problems that teams face when collaborating.
+- Breaking down silos and embracing more perspectives and conversations can enable you and your team to deliver better software. 
+
 #### What is your favorite git command? Why?
+```git
+git push 
+```
+>It means i developed something which is working(function) in the project.
+
 #### What does remote/local mean in Git? 
+- A remote in Git is a common repository that all team members use to exchange their changes.
+- Git local repository is the one on which we will make local changes, typically this local repository is on our computer.
 
 ### DevOps
 
@@ -710,6 +733,12 @@ How to use it:
 #### What is a API?
 #### What is REST API?
 #### What is JSON? When to use?
+- JSON is short for JavaScript Object Notation, and is a way to store information in an organized, easy-to-access manner.
+ In a nutshell, it gives us a human-readable collection of data that we can access in a really logical manner.
+
+When to use it:
+- In short, you are forced to communicate things using key-value pairs and arrays.
+- for fast and and effective communication between server -user for example.
 #### What is TCP/IP? What layers does it define, what are they responsible for?
 #### What’s the difference between TCP and UDP?
 #### How does an HTTP Request look like? What are the most relevant HTTP header fields?
