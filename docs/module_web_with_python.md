@@ -880,6 +880,7 @@ Agile development methodology:
 - The ````Development Team```` in Scrum a team is not just the executive organ that receives its tasks from the project leader, it rather decides self dependent,
  which requirements or User Stories it can accomplish in one sprint. 
 #### What are the SCRUM ceremonies?
+
 *Ceremonies*|
 :-----:|
 Sprint Planning|
@@ -888,6 +889,7 @@ Sprint retrospective|
 Daily Scrum|
 
 #### What are the SCRUM artifacts?
+
 *Artifacts*|
 :-----:|
 Increment|
