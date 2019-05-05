@@ -5,13 +5,38 @@
 ### Data structures
 
 #### What is the purpose and working method of a list/array data structure?
+> An array is a collection of items stored at contiguous memory locations. 
+The idea is to store multiple items of the same type together. Find them easier.
+The Data Structure can be implemented in several ways and its implementation may vary from language to language.
 #### What is the difference between a list/array and a set?
+>List is an ordered sequence of elements whereas Set is a distinct list of elements which is unordered.
+Set contains no duplicate elements.
 #### What can you tell about the stack and queue data structure?
+>Stack A stack is a linear data structure in which elements can be inserted and deleted only from one side of the list, called the top.
+A stack follows the LIFO (Last In First Out) principle, i.e., the element inserted at the last is the first element to come out.
+The insertion of an element into stack is called push operation, and deletion of an element from the stack is called pop operation.
+In stack we always keep track of the last element present in the list with a pointer called top.
 #### What is the purpose and working method of a dictionary/map data structure?
+>A dict can be thought of as a container of ( key : value ) pairs. This can be a helpful way to imagine the information in a mapping.
+Each pair in the list is the mapping from a key to an associated value.
+Faster method for look for,
 
 ### Algorithms
 
 #### Fibonacci sequences. Write a method(or pseudo code), that generates the Fibonacci sequences.
+```python
+def fibonacci(n):
+    a = 0
+    b = 1
+    for i in range(0, n):
+        temp = a
+        a = b
+        b = temp + b
+    return a
+    
+for c in range(0, 15):
+    print(fibonacci(c))  
+```       
 #### How do you find a max value in a list/array if you can’t use any built-in functions?
 #### What do we call an *in-place* sort?
 
