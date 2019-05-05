@@ -846,7 +846,37 @@ Cookies:
 ## Software Development Methodologies
 
 #### What kind of software development methodologies do you know? What are the main features of these?
+Waterfall development methodology:
+ 
+    - requierements -> Desing -> Implementation -> Verification -> Maintanance 
+>It’s a rigid linear model that consists of sequential phases
+(requirements, design, implementation, verification, maintenance) in which distinct goals are accomplished. 
+Each phase must be 100% complete before the next phase can start,
+and traditionally there is no process for going back to modify the project or direction. 
+
+Agile development methodology:
+
+    - Requirement/Features/User stories/Product Backlog ->
+     -> Scrum Team(with lead) ->
+     -> Sprint Planning(relative time)->
+     -> Sprints 1-4 Weeks Duration -> 
+     -> Production deployment ->
+     -> Done Checklist
+     (While this process other people making the desing,build it,inegrate,test the software) - >
+     -> Sprint Retrospective ->
+     -> Product review(customer input)->
+     -> Potential Product Increment
+     
 #### What are the SCRUM roles?
+- One of the most important things for the success of scrum is the role of the ```Product Owner```,
+ who serves as an interface between the team and other involved parties (stakeholders).
+ 
+ - The ```Scrum Master``` does not interfere into the decisions of the team regarding specifically the development,
+ but rather is there for the team as an advisor. He ````only interferes```` actively ```when anybody```
+ of the team or any other participant of a project (Stakeholder) ````does not obey the rules of Scrum.```` 
+
+- The ````Scrum Development Team```` in Scrum a team is not just the executive organ that receives its tasks from the project leader, it rather decides self dependent,
+ which requirements or User Stories it can accomplish in one sprint. 
 #### What are the SCRUM ceremonies?
 #### What are the SCRUM artifacts?
 #### What is the main goal of a retrospective meeting?
