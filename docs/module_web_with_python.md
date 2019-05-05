@@ -788,6 +788,7 @@ Transport|Control the flow of information between the application program runnin
 Network|Route packets between networks (inter-network)|IP
 Data link|Move data within a local area network|Ethernet, ATM, PPP
 Physical|Define the physical characteristics of the communication hardware and medium|radio, twisted pair, fiber
+
 #### What’s the difference between TCP and UDP?
 >TCP (Transmission Control Protocol) is connection oriented, whereas UDP (User Datagram Protocol) is connection-less. This means that TCP tracks all data sent, requiring acknowledgment for each octet (generally). UDP does not use acknowledgments at all, and is usually used for protocols where a few lost datagrams do not matter.
 
