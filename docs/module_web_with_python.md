@@ -855,8 +855,9 @@ Each phase must be 100% complete before the next phase can start,
 and traditionally there is no process for going back to modify the project or direction. 
 
 Agile development methodology:
-
-    - Requirement/Features/User stories/Product Backlog ->
+    ![image](https://www.visual-paradigm.com/servlet/editor-content/scrum/what-are-scrum-ceremonies/sites/7/2018/11/the-agile-scrum-framework.png)
+ 
+     -> Requirement/Features/User stories/Product Backlog ->
      -> Scrum Team(with lead) ->
      -> Sprint Planning(relative time)->
      -> Sprints 1-4 Weeks Duration -> 
@@ -875,9 +876,31 @@ Agile development methodology:
  but rather is there for the team as an advisor. He ````only interferes```` actively ```when anybody```
  of the team or any other participant of a project (Stakeholder) ````does not obey the rules of Scrum.```` 
 
-- The ````Scrum Development Team```` in Scrum a team is not just the executive organ that receives its tasks from the project leader, it rather decides self dependent,
+- The ````Development Team```` in Scrum a team is not just the executive organ that receives its tasks from the project leader, it rather decides self dependent,
  which requirements or User Stories it can accomplish in one sprint. 
 #### What are the SCRUM ceremonies?
+*Ceremonies*|
+:-----:|
+Sprint Planning|
+Sprint review|
+Sprint retrospective|
+Daily Scrum|
+
 #### What are the SCRUM artifacts?
+*Artifacts*|
+:-----:|
+Increment|
+Product backlog|
+Sprint backlog|
+
 #### What is the main goal of a retrospective meeting?
+This is where the Scrum Team meets ```to reflect on their previous Sprint``` and to figure out ````how to improve as a team```` by asking – what went well,
+what did not and what can be improved. ```It allows``` the team to focus on its ```overall performance``` and identify strategies for continuous ````improvement.````
 #### Explain, when would you recommend to use the waterfall methodology?
+Use Waterfall when:
+
+- the project is simple
+- the project is complicated, but you have the expertise to deliver it
+- it is all you know and you have no support for change
+- the upfront investment is not risky to make
+- you focus your performance measures on delivery date and budget
