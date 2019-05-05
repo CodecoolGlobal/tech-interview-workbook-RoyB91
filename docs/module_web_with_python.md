@@ -458,17 +458,127 @@ where address like "%Miskolc%"
 ### HTML & CSS
 
 #### What’s the difference between XML, XHTML and HTML?
+    - Both are markup languages, which represents text data in proper format using tags. However they are used for completely different purposes.
+
+    Similarities between HTML and XML?
+     1. Both are languages of web.
+     2. Both are markup languages.
+     3. Both are originated from SGML. [Standardized General Markup Language]
+     4. Tags are basic building blocks of both HTML and XML documents.
+     
+     Differences between HTML and XML
+     1. HTML tags are predefined tags where as XML tags are user defined tags.
+     2. HTML tags are limited number of tags where as XML tags are extensible.
+     3. HTML tags are case insensitive where as XML tags are sensitive.
+     4. HTML tags are meant for displaying the data but not for describing the data where as XML tags are meant for describing the data.
+     5. HTML focuses on how data looks where as XML focuses on what data is.
+
+    XHTML:
+    1. XHTML stands for EXtensible HyperText Markup Language
+    2. XHTML is almost identical to HTML
+    3. XHTML is stricter than HTML
+    4. XHTML is HTML defined as an XML application
+        
+    
 #### How to include a JavaScript file in a webpage?
+> In .html file we use the script tag to import it. :
+```html
+<script type="text/javascript" src="path-to-javascript-file.js"></script>
+```
 #### How to include a CSS file in a webpage?
+>Using the link tag in .html file
+```html
+<link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+```
 #### How to select an element using its id in CSS?
+> You have to use the hashtag(#) + the element id name:
+```css
+#elementIdName {
+    /*code;*/
+}
+```
 #### How to select elements using their class in CSS?
+>You have to use the dot(.) + element class name:
+```css
+.classname {
+    /*code;*/
+}
+```
 #### How to select elements which have the ‘alpha’ and ‘beta’ classes in CSS?
+> You have to define in css file with dot classname dot classname :
+```css
+.alpha.beta{color:red;}
+/*here you can reach the beta class*/
+```
 #### How to select all list items in all ordered lists on the page in CSS?
+> You can reach by using the ordered tag which is < ol >:
+```css
+ol {
+ /*code;*/
+}
+```
 #### How to select elements using their attributes in CSS?
+```css
+/*We can reach differently*/
+
+[data-value] {
+  /* Attribute exists */
+}
+
+[data-value="foo"] {
+  /* Attribute has this exact value */
+}
+
+[data-value*="foo"] {
+  /* Attribute value contains this value somewhere in it */
+}
+
+[data-value~="foo"] {
+  /* Attribute has this value in a space-separated list somewhere */
+}
+
+[data-value^="foo"] {
+  /* Attribute value starts with this */
+}
+
+[data-value|="foo"] {
+  /* Attribute value starts with this in a dash-separated list */
+}
+
+[data-value$="foo"] {
+  /* Attribute value ends with this */
+}
+```
 #### What are UX and UI?
+>UI:
+>>The “UI” in UI design stands for “user interface.” The user interface is the graphical layout of an application.
+It consists of the buttons users click on, the text they read, the images, sliders, text entry fields, and all the rest of the items the user interacts with. This includes screen layout, transitions,
+interface animations and every single micro-interaction. Any sort of visual element, interaction, or animation must all be designed.
+
+>UX:
+>>“UX” stands for “user experience.” A user’s experience of the app is determined by how they interact with it.
+User experience is determined by how easy or difficult it is to interact with the user interface elements that the UI designers have created.
 #### Please list some points that an application should fulfill to have good UX.
+    -useful : Your content should be original and fulfill a need
+    -usable : Site must be easy to use
+    -valuable 
+    -accesible : Content needs to be accessible to people with disabilities (example:colorblind)
+    -desirable: evoke emotion and appreciation
 #### What is XML, XSLT, DTD?
+>First we will start at the top. The VERY top. SGML stands for Standard Generalized Markup Language. Simply put, it is the very root coding of coding. HTML is an application of SGML. 
+
+- XML is a simplified subset of SGML. It stands for eXtensible Markup Language. 
+
+- DTD stands for Document Type Declaration. It is a set of instructions that states what tags are usable and what (re)action they create. Each browser has a DTD set in it's programming set by the browser companies. This is how some tags will work in only one type of browser or version. It has the tags stated in it's DTD. XML makes it possible to create unique tag sets by applying it's own DTD. This makes the DTD more compatable with more browsers. 
+
+- XSLT stands for eXtensible Stylesheet Language Transformation. It is a strong verions of CSS that formats the XML page for viewing.
 #### What is the difference between HTML and XML?
+     Differences between HTML and XML
+     1. HTML tags are predefined tags where as XML tags are user defined tags.
+     2. HTML tags are limited number of tags where as XML tags are extensible.
+     3. HTML tags are case insensitive where as XML tags are sensitive.
+     4. HTML tags are meant for displaying the data but not for describing the data where as XML tags are meant for describing the data.
+     5. HTML focuses on how data looks where as XML focuses on what data is.
 
 ### Javascript
 
