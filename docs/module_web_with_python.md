@@ -583,11 +583,110 @@ User experience is determined by how easy or difficult it is to interact with th
 ### Javascript
 
 #### What is javascript?
+    JavaScript is the Programming Language for the Web
+    - can update and change both HTML and CSS
+    - can calculate, manipulate and validate data
 #### When to use AJAX? Bring examples of its usage.
+>Ajax programming is that you can exchange data in the background without actually disturbing the user experience.
+>>And when you want render the access of data more efficiently and effectively.
+    
+    Things That Are Good for Ajax:
+        - Form validation : ( It's so much nicer when the form tells
+            you as you are typing if you've filled it out wrong or not. )
+        
+        - Comments: (when a commenter hits the comment button, it's nice to see the comment appear immediately on the page.)
+        
+        - Login Forms
+        - Auto-Complete(when searching for example)
+        - Voting and Rating (forums)
+        - Updating With User Content
+        - Chat Rooms And Instant Messaging
+        - Lightboxes instead of pop-ups
 #### What is DOM and how to manipulate it from Javascript?
+> When a web page is loaded, the browser creates a Document Object Model of the page.(DOM)
+>>You can manipulate DOM via .js file which is imported to your html file with a < script > tag.
+```javascript
+let element = document.querySelector('selector')
+
+/* You can use it to get the element from the DOM and save
+it as a variable, and manipulate it.  */
+
+
+let btn = document.querySelector('button');
+btn.addEventListener('click', foo);
+
+/*Or give it a event listener for a specific  element*/
+
+
+let pEle = document.createElement('p')
+
+/*You can even create elements*/
+
+
+let div = document.querySelector('div');
+div.setAttribute('contentEditable', '')
+/* method either adds a new attribute to an HTML element, or updates the value*/
+```
 #### What are events and how/why to use them in Javascript?
+Events occur when the page loads, when user interacts (clicks, hovers, changes) and myriad other times, and can be triggered manually too.
+
+How:
+>The addEventListener method is the most preferred way to add an event listener to window, document or any other element in the DOM.
+```javascript
+let btn = document.querySelector('button');
+btn.addEventListener('click',function(event) {
+  }
+);
+```
+Why:
+>Because ,JavaScript in the browser uses an event-driven programming model.
+```! Everything starts by following an event !```
+
+
 #### What is event bubbling/capturing? How would you use it?
+Event bubbling and capturing are two ways of event propagation in the HTML DOM API,
+when an event occurs in an element inside another element,
+and both elements have registered a handle for that event.
+
+When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
+
+With ````capturing````, the event is ````first```` captured by the ````outermost element```` and propagated ```to the inner elements```.
+
+Event capturing:
+
+When you use event capturing
+
+               
+    ---------------| |-----------------
+    | element1     | |                |
+    |   -----------| |-----------     |
+    |   |element2  \ /          |     |
+    |   -------------------------     |
+    |        Event CAPTURING          |
+    -----------------------------------
+the event handler of element1 fires first, the event handler of element2 fires last.
+
+Event bubbling:
+
+When you use event bubbling
+    
+                   / \
+    ---------------| |-----------------
+    | element1     | |                |
+    |   -----------| |-----------     |
+    |   |element2  | |          |     |
+    |   -------------------------     |
+    |        Event BUBBLING           |
+    -----------------------------------
+the event handler of element2 fires first, the event handler of element1 fires last.
 #### What is JSON and how do we use it?
+- JSON is short for JavaScript Object Notation, and is a way to store information in an organized, easy-to-access manner.
+ In a nutshell, it gives us a human-readable collection of data that we can access in a really logical manner.
+```JSON (in Javascript) is a string!```
+
+How to use it:
+- In short, you are forced to communicate things using key-value pairs and arrays.
+- JSON is basically a way of communicating data to someone, with very, very specific rules.
 
 ## Software engineering
 
