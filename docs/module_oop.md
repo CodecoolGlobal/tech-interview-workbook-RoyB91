@@ -5,6 +5,9 @@
 ### Error handling
 
 #### What does 'fail fast' mean in terms of exception handling? Why is it a good practice?
+>Fail fast means,  is to code your software such that, when there is a problem,
+>the software fails as soon as and as visibly as possible,
+>rather than trying to proceed in a possibly unstable state.
 
 ## Computer Science
 
