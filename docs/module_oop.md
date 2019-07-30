@@ -14,8 +14,43 @@
 ### Data structures
 
 #### How to find the middle element of singly linked list in O(n)?
+>>Traverse linked list using two pointers. Move one pointer by one and other pointer by two. When the fast pointer reaches end slow pointer will reach middle of the linked list.
+```java
+class Node
+{
+  int data;
+  Node next;
+
+public Node getHead(){
+  return this.head;
+}
+
+public int getMiddleElement(LinkedList l)
+{
+    return getMiddleElement(l.getHead());
+}
+
+private int getMiddleElement(Node n){
+    Node slow = n;
+    Node fast = n;
+
+    while(fast!=null && fast.next!=null) {
+        fast = fast.next.next;
+        slow = slow.next;
+    }
+    return slow.data;
+}
+
+
+}
+```
 #### Given an array of integers going from 1 to 100 (both inclusive) there is a duplicated entry. How to find it?
+>First option: Sort the array and traverse the array and check for duplicated entry.
+
 #### What is a linked list? How to find if a linked list has a loop?
+>Linked lists are basic data structures.
+>You have to iterate through it with the next parameter.
+>>The basic idea is that you can iterate through the list by checking to see if the list has a next parameter, like so: while (currentNode.next != null) { ... }.
 #### What is the Big O time complexity of the common operations in an ArrayList, LinkedList, HashMap? And of a bubble sort, quicksort, finding items in a Binary Search tree?
 #### How does HashMap work?
 #### Why is it important for keys in a map to have an immutable type? (Consider String for example.)
