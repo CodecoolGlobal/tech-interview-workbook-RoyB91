@@ -104,36 +104,93 @@ Type casting is when you assign a value of one primitive data type to another ty
     double myDouble = 9.78;
     int myInt = (int) myDouble;
 #### Which order should we catch the exceptions? Why?
+>Catch the most specific first and then the most generic,
+as whatever matches first, gets executed. The most generic will always catch.
 
 ### Object-oriented
 
 #### What is a class?
+ A class is a blueprint or prototype from which objects are created.
+ It describes the behavior/state that the object of its type supports.
 #### What is an object?
+ An object is a software bundle of related state and behavior.
 #### What is a constructor?
+A constructor initializes an object when it is created.
 #### Do we require parameter for constructors?
+ No, it is optional. Java allows two types of constructors: No argument Constructors and Parameterized Constructors.
 #### What is an interface?
+An interface is a contract between a class and the outside world. When a class implements an interface,
+it promises to provide the behavior published by that interface.
 #### What are access modifiers?
+Access modifiers in Java helps to restrict the scope of a class, constructor , variable , method or data member.
+These are: public, default (or package-private), protected, and private.
 #### What is data hiding?
+Data hiding is a mechanism to hide information from the client. The information may be data or implementation or algorithm.
+We achieve this using access modifiers.
 #### Can a static method use non-static members?
+A static method can access non-static methods and fields of any instance it knows of.
+However, it cannot access anything non-static if it doesn't know which instance to operate on.
 #### What is the difference between hiding a static method and overriding an instance method?
+An overridden instance method makes the code in its super's method unavailable in the subclass. 
+A static method cannot be overridden, only hidden, therefore accessing the super's code in the subclass is still possible.
 #### Define the following terms: Instantiation, Attribute, Method
+Instantiate: to create an object from its class using the 'new' keyword.
+Attribute: attributes are variables within a class
+Method: a method is a block of code which only runs when it is called.
 #### Could we access a static variable (or method) from a non-static method? Why?
+Yes, a non-static method can access a static variable or call a static method in Java, because of static members i.e. both static
+variable and static methods belong to a class and can be called from anywhere, depending on their access modifiers.
 #### Could we access a non-static variable (or method) from a static method? Why?
+You can not access non static members inside static context. This would result in a compile time error, as static methods are bonded during compile time,
+as opposed to binding of the non static method, which happens at runtime.
 #### How many instances you have of a static variable of a given class?
+Only one copy of static variables are created when a class is loaded; this is shared by all the different objects of a class.
 #### Why is it not a good practice to write a lot of static methods?
+Interfaces and abstract classes only define non-static methods. Static methods thus don't fit very well into inheritance.
+
+Static methods do not have access to "super" (or "this"), which means that static methods cannot be overridden, only hidden.
 #### What are the features of static attributes and static methods of a class? What are the benefits, when to use them?
+ They belong to the class, and not to the object(instance). They can be accessed directly by the class name and don’t need any object.
+ Static variables are initialized only once, at the start of the execution. These variables will be initialized first, before the initialization of any instance variables.
+ A single copy is shared by all instances of the class.
+ A static method can access only static data. It can not access non-static data (instance variables). A static method can call only other static methods and can not call a non-static method from it. A static method cannot refer to "this" or "super" keywords in anyway.
 #### What is the ‘this’ reference?
+The 'this' keyword refers to the current object in a method or constructor.
 #### What are base class, subclass and superclass?
+Inheritance. A class that is derived from another class is called a subclass (also a derived class, extended class, or child class).
+The class from which the subclass is derived is called a superclass (also a base class or a parent class).
 #### Draw an object oriented family (as entities, with relations) on the whiteboard.
 #### Difference between overloading and overriding?
+Overload adds more functionality to an already existing method, overriding redefines the method functionality.
 #### What are the Object Oriented Principles? Explain the concepts with realistic examples!
+OO principles: encapsulation (data hiding), inheritance, polymorphism, abstraction
+ - encapsulation:
+ - inheritance:
+ - polymorphism:
+ - abstraction:
 #### What is method overloading?
+ A type of polymorphism. Method overloading means that there are several methods present,
+   in a class having the same name but different types/order/number of parameters.
 #### What is method overriding?
+A type of polymorphism. Method overriding means that a subclass has the same method as its super (same name, types/order/number of parameters),
+ but with a different method body.
 #### Explain how object oriented languages attempt to simplify memory management for Programmers.
+The purpose of garbage collection is to identify and discard objects that are no longer needed by a program so that their resources can be reclaimed and reused.
+A Java object is subject to garbage collection when it becomes unreachable to the program in which it is used.
 #### Explain the “Single Responsibility” principle!
+There should never be more than one reason for a class to change.   
 #### What is an object oriented program? Explain, show.
+Simply put, OOP focuses on the objects that developers want to manipulate rather than the logic required to manipulate them. This approach to programming is well-suited for programs that are large, complex and actively updated or maintained. Due to the organization of an object-oriented program, this method is also conducive to collaborative development where projects can be divided into groups.
+ Additional benefits of OOP include code reusability, scalability  and efficiency
 #### How do you make a class immutable? What do you need to watch out for?
+ 1. Declare the class as final so it can’t be extended.
+ 2. Make all fields private so that direct access is not allowed.
+ 3. Don’t provide setter methods for variables
+ 4. Make all mutable fields final so that it’s value can be assigned only once.
+ 5. Initialize all the fields via a constructor performing deep copy.
+ 6. Perform cloning of objects in the getter methods to return a copy rather than returning the actual object reference.
 #### How many instances can be created for an abstract class?
+None, an abstract class cannot be instantiated. (related:  anonymous subclasses)
 
 ## Programming languages
 
