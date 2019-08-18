@@ -25,9 +25,9 @@ public Node getHead(){
   return this.head;
 }
 
-public int getMiddleElement(LinkedList l)
+public int getMiddleElement(LinkedList list)
 {
-    return getMiddleElement(l.getHead());
+    return getMiddleElement(list.getHead());
 }
 
 private int getMiddleElement(Node n){
@@ -46,24 +46,63 @@ private int getMiddleElement(Node n){
 ```
 #### Given an array of integers going from 1 to 100 (both inclusive) there is a duplicated entry. How to find it?
 >First option: Sort the array and traverse the array and check for duplicated entry.
+```java
+public int findDuplicate(int[] arr, int size) {
+            for (i = 0; i < size; i++) { 
+                for (j = i + 1; j < size; j++) { 
+                    if (arr[i] == arr[j])  
+                        return arr[i]; 
+                } 
+            } 
+        }
+```
 
 #### What is a linked list? How to find if a linked list has a loop?
 >Linked lists are basic data structures.
 >You have to iterate through it with the next parameter.
->>The basic idea is that you can iterate through the list by checking to see if the list has a next parameter, like so: while (currentNode.next != null) { ... }.
-#### What is the Big O time complexity of the common operations in an ArrayList, LinkedList, HashMap? And of a bubble sort, quicksort, finding items in a Binary Search tree?
+>>The basic idea is that you can iterate through the list by checking to see if the list has a next parameter,
+> like so: while (currentNode.next != null) { ... }.
+ #### What is the Big O time complexity of the common operations in an ArrayList, LinkedList, HashMap? And of a bubble sort, quicksort, finding items in a Binary Search tree?
+- ArrayList: O(1): access, search
+                O(n): insertion, deletion
+- LinkedList: O(1): add(E element), Iterator.remove(), ListIterator.add(E element) (insert/delete)
+                 O(n): add(int index, E elem), get(int index), remove(int index) (access/search)
+- HashMap: O(1) with high probability, (A hashmap operation is O(1), and depending on implementation Ω(∞), Ω(log N) or Ω(N).)
+- Bubble Sort: O(n^2)
+- Quicksort: O(n^2)
+- Binary Search tree: average: Θ(log(n)), worst: O(n) for all 4 (access, search, insertion, deletion)
 #### How does HashMap work?
+>HashMap in Java works on hashing principle. It is a data structure which allows us to store object and retrieve it in constant time O(1) provided we know the key.
+>>In hashing, hash functions are used to link key and value in HashMap.
+
 #### Why is it important for keys in a map to have an immutable type? (Consider String for example.)
+>If immutable, the object's hashcode wont change and it allows caching the hashcode of different keys which makes the overall retrieval process very fast.
+>Also for mutable objects ,the hashCode() might be dependent on fields that could change,
+>if this happens you wont be able to find the key (and its value) in the HashMap since hashCode() returns different value.
 
 ### Other
 
 #### What is a garbage collector, in a nutshell?
+>Garbage collector reclaims objects that are no longer being used, clears their memory, and keeps the memory available for future allocations.
+>This is done via bookkeeping the references to the objects. Any unreferenced object is a garbage and will be collected.
 
 ## Programming paradigms
 
 ### Procedural
 
 #### What is casting? What is the difference between up vs downcasting?
+Type casting is when you assign a value of one primitive data type to another type.
+ Up (or widening) casting is done automatically when passing a smaller size type to a larger size type: 
+
+    byte -> short -> char -> int -> long -> float -> double
+    int myInt = 9;
+    double myDouble = myInt; 
+
+ Down (or narrowing) casting must be done manually by placing the type in parentheses in front of the value: 
+
+    double -> float -> long -> int -> char -> short -> byte
+    double myDouble = 9.78;
+    int myInt = (int) myDouble;
 #### Which order should we catch the exceptions? Why?
 
 ### Object-oriented
