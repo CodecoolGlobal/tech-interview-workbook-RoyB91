@@ -197,26 +197,56 @@ None, an abstract class cannot be instantiated. (related:  anonymous subclasses)
 ### Java
 
 #### What is autoboxing and unboxing?
+ Autoboxing is the automatic conversion that the Java compiler makes between the primitive types and their corresponding object wrapper classes. For example, converting an int to an Integer,
+ a double to a Double, and so on. If the conversion goes the other way, this is called unboxing.
 #### If you have a variable, that shall store a positive whole number between 0 and 200, what primitive type would you use to store it?
+ byte
 #### What is the "golden rule" of variable scoping in Java? What is the lifetime of variables?
+ As a general rule, variables that are defined within a block are not accessible outside that block. The lifetime of a variable refers to how long the variable exists before it is destroyed.
 #### What is the purpose of the ‘equals()’ method?
+ Content comparison. .equals() compares the values in the objects.
 #### What is the difference between '==' and 'equals()'?
+ We can use == operators for reference comparison (address comparison) and .equals() method for content comparison. In simple words, == checks if both objects point to the same memory location whereas .equals() evaluates to the comparison of values in the objects.
+ Also, one is an operator, the other is a method.
 #### What does the ‘static’ keyword mean?
+In Java, a static member is a member of a class that isn’t associated with an instance of a class. Instead, the member belongs to the class itself. As a result, you can access the static member without first creating a class instance.
 #### Why is the main() method declared as static? Explain.
+  When you start execution of a Java program, JVM looks for the main method in the provided Java class as that is the entry point for the execution. You don’t have to create an object from a class before you can use static methods defined by the class. So main is static.
+  JVM has access to it without having to create an instance of it.
 #### What is the default access modifier in a class?
+Package-private, as default makes the class visible only in the package.
 #### What is the JVM?
+ Java Virtual Machine
 #### What is the difference between the JRE and the JDK?
+ - Java Runtime Environment is needed to run java applications. Contains the JVM and the class libraries.
+ - Java Development Kit is for writing java applications. Contains everything the JRE has + the java compiler and dev tools. 
 #### What is the difference between long and Long?
+ One is a primitive data type, the other is its corresponding wrapper class.
 #### Can a long store bigger numbers than a Long?
+No, both can store the same numbers. A Long only wraps the long data type, does not expand its capacity.
 #### What kind of packages do you know under java.util.* ? Bring at least 3 examples.
+Scanner, Arrays, Collections, Date, ArrayList.
+
 #### What are the access modifiers in Java? Which one could we use for class?
+Access modifiers in Java: public, default, protected, private
+ for classes: public, default (package access)
 #### Can an “enum” contain methods in Java? Explain.
+yes, e.g.: getters for enum values
 #### When would you use a private/protected/public attribute? What is the difference?
+ These are access modifiers, used to restrict the access of a class, constructor, data member and method in another class.
+-  Private is visible within the class.
+-  Protected is visible in the package + subclasses of that class.
+-  Public is visible everywhere.
 #### How do you prevent developers from subclassing a class?
+ By using the "final" keyword.
 #### How do you prevent developers from overriding a method in a subclass?
+ Private, static, or final methods cannot be overridden.
 #### How do you prevent developers from changing the value of a variable?
+ By using the "final" keyword and using getter methods for outside read-only access.
 #### Think about money ;) How would you store a currency value, that shall support decimal parts? Think it through again, and try to think outside of the box!
+ BigDecimal is what's widely used, but some argue that any primitive type will also do the job in 99% of cases. So a double, I guess. 
 #### What happens if you try to call something, that you have no access to, because of data hiding?
+Actually you cant see the method even to call.
 #### What happens if you try to delete/drop an item from an array, while you are iterating over it?
 #### What happens if you try to delete/drop/add an item from a List, while you are iterating over it?
 #### What happens if you try to add an item to the end of an array, while you are iterating over it?
