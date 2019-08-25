@@ -248,13 +248,28 @@ yes, e.g.: getters for enum values
 #### What happens if you try to call something, that you have no access to, because of data hiding?
 Actually you cant see the method even to call.
 #### What happens if you try to delete/drop an item from an array, while you are iterating over it?
+First item is removed, then array is shifted to the left, so index is increased and second item is spared. And so on.
 #### What happens if you try to delete/drop/add an item from a List, while you are iterating over it?
 #### What happens if you try to add an item to the end of an array, while you are iterating over it?
 #### If you need to access the iterator variable after a for loop, how would you do it?
-#### Which interfaces extend the Collection interface in Java. Which classes?
+Create a field outside the scope, and while iterating assign the value to that field.
+#### Which interfaces extend the Collection interface in Java. Which classes?                                   
+interfaces: Set, List, Queue, Deque
+
+classes: ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet
+
 #### What is the connection between equals() and hashCode()? How are they used in HashMap?
+The unicity of keys in a HashMap are calculated according to both .equals() and hashCode().
+Objects which are .equals() MUST have the same .hashCode(). 
+
+Also: hashCode() must be overridden in every class which overrides equals() method.
 #### What is the difference between checked exceptions and unchecked exceptions? Could you bring example for each?
+- Checked exceptions are checked by the compiler (compile time exceptions). These exceptions cannot simply be ignored, the programmer should take care of (handle) these exceptions.
+
+- Unchecked exceptions come up during program run (Runtime Exceptions). These include programming bugs, such as logic errors or improper use of an API. Runtime exceptions are ignored at the time of compilation.
 #### What is Error in Java and how does it relate to Exception?
+Errors are not exceptions at all. They are problems that arise beyond the control of the user or the programmer.
+For example, if a stack overflow occurs, an error will arise.
 #### When does 'finally' block run? What it is used for? Could you give an example from your projects when you would use 'finally'?
 #### What is the largest number you can work with in Java?
 #### When you use method overriding, can you change the access level of the method, from protected to public? Why?When you use method overriding, can you change the access level of the method, from public to protected? Why?
