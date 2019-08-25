@@ -271,13 +271,41 @@ Also: hashCode() must be overridden in every class which overrides equals() meth
 Errors are not exceptions at all. They are problems that arise beyond the control of the user or the programmer.
 For example, if a stack overflow occurs, an error will arise.
 #### When does 'finally' block run? What it is used for? Could you give an example from your projects when you would use 'finally'?
+The finally block follows a try block or a catch block.
+A finally block of code always executes, irrespective of occurrence of an Exception.
+```java
+  try {
+            File file = new File(filePath);
+            reader = new BufferedReader(new FileReader(file));
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                reader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+```
 #### What is the largest number you can work with in Java?
-#### When you use method overriding, can you change the access level of the method, from protected to public? Why?When you use method overriding, can you change the access level of the method, from public to protected? Why?
+In Java, the integer is  32 bits ranges till 2,147,483,647.
+            
+            But,actually, limitless?
+
+#### When you use method overriding, can you change the access level of the method, from protected to public? Why?
+    yes, access level can be more permissive.
+####When you use method overriding, can you change the access level of the method, from public to protected? Why?
+    no, access level cannot be more restrictive on the overriding method 
 #### Can the main method be overridden? Explain your answer!
+    no, main method is static. Static methods cannot be overriden, hiding comes into effect
 #### When you use method overriding, can you throw fewer exceptions in the subclass than in the parent class? Why?
+    yes, but they cannot be new or broader than the parent class
 #### When you use method overriding, can you throw more exceptions in the subclass than in the parent class? Why?
+     no, can only contain the already declared exceptions, on the same level
 #### What does "final" mean in case of a variable, method or a class?
+     it cannot be changed (redeclared or overwritten) 
 #### What is the super keyword?
+     The super keyword in Java is a reference variable which is used to refer immediate parent class object.
 #### What are “generics”? When to use? Show examples.
 #### What is the benefit of having “generic” containers?
 #### Given two Java programs on two different machines. How can you communicate between the two? What are the possible ways?
