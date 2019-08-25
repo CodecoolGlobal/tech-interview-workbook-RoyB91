@@ -307,9 +307,43 @@ In Java, the integer is  32 bits ranges till 2,147,483,647.
 #### What is the super keyword?
      The super keyword in Java is a reference variable which is used to refer immediate parent class object.
 #### What are “generics”? When to use? Show examples.
+Java Generic methods and generic classes enable programmers to specify, with a single method declaration, a set of related methods, or with a single class declaration, a set of related types, respectively.
+ Generics also provide compile-time type safety that allows programmers to catch invalid types at compile time. (less runtime bugs)
+```java
+
+    public class GenericMethodTest {
+       // generic method printArray
+       public static < E > void printArray( E[] inputArray ) {
+          // Display array elements
+          for(E element : inputArray) {
+             System.out.printf("%s ", element);
+          }
+          System.out.println();
+       }
+```
 #### What is the benefit of having “generic” containers?
+     Stronger type-checking, elimination of casts
 #### Given two Java programs on two different machines. How can you communicate between the two? What are the possible ways?
+Well, it depends on how the other machine is connected to the internet -- specifically, the machine that will be running
+the server side application. If the server is directly connected to the internet, then you can just use the ip address.
+The client machine should have no issues resolving the address, assuming that it is connected (directly or indirectly) to the internet.
+If the server is not directly connected to the internet, meaning behind a firewall and/or router, and using a NAT server, then ... 
+the client needs to connect to the ip address of the machine (router) that is on the internet; and the router and firewalls has to be configured to
+forward the needed ports to allow the client to get to the server application. 
+    
+      do new Socket(address, port), that address has to be reachable from your client computer.
 #### What is an annotation? What can be annotated and how? Show examples.
+ Annotations are a form of metadata, provide data about a program that is not part of the program itself.
+ 
+ 
+  Classes, methods, variables, parameters and Java packages may be annotated.
+ 
+ 
+  example:
+   ```java
+   @Override
+```
+  https://en.wikipedia.org/wiki/Java_annotation#Built-in_annotations
 
 ### C&#35;
 
@@ -362,4 +396,16 @@ In Java, the integer is  32 bits ranges till 2,147,483,647.
 ### Database
 
 #### How can you connect your application to a database server? What are the possible ways?
+    JDBC (Java DB Connectivity)
+    
+    JPA (Java persistence API)
 #### What do you know about database normalization?
+ Normalization is the process of organizing the data in the database. 
+ 
+ It is used to minimize the redundancy from a relation or set of relations. 
+ 
+ It is also used to eliminate the undesirable characteristics like Insertion, Update and Deletion Anomalies.
+ 
+ It divides the larger table into the smaller table and links them using relationship.
+ 
+ The normal form is used to reduce redundancy from the database table. (Normal forms: 1NF, 2NF, 3NF, BCNF, 4NF)
