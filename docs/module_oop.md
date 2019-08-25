@@ -248,9 +248,12 @@ yes, e.g.: getters for enum values
 #### What happens if you try to call something, that you have no access to, because of data hiding?
 Actually you cant see the method even to call.
 #### What happens if you try to delete/drop an item from an array, while you are iterating over it?
-First item is removed, then array is shifted to the left, so index is increased and second item is spared. And so on.
+Actually u cant delete while u iterating through because you will get a ConcurrentModificationException.
 #### What happens if you try to delete/drop/add an item from a List, while you are iterating over it?
+Actually u cant delete while u iterating through because you will get a ConcurrentModificationException.
 #### What happens if you try to add an item to the end of an array, while you are iterating over it?
+Actually u cant delete while u iterating through because you will get a ConcurrentModificationException.
+
 #### If you need to access the iterator variable after a for loop, how would you do it?
 Create a field outside the scope, and while iterating assign the value to that field.
 #### Which interfaces extend the Collection interface in Java. Which classes?                                   
