@@ -84,13 +84,11 @@ else:
 >Arguments are the values that are passed to the function at run-time so that the function can do the designated task using these values.
 
 #### What is variable shadowing? (context: variable scope)
->we can say variable duplicate,it can goes to error , if the server working with the wrong variable
+> variable shadowing occurs when a variable declared within a certain scope (decision block, method, or inner class) has the same name as a variable declared in an outer scope.
 #### What happens if you try to delete/drop/add an item from a List, while you are iterating over it in Python?
->You cant modify a list while iterating through.
+>You can do that freely.
 #### What happens if you try to add an item to the end of a List, while you are iterating over it in Python?
->It is not safe to modify the sequence being iterated over in the loop (this can only happen for mutable sequence types, such as lists). 
->If you need to modify the list you are iterating over (for example, to duplicate selected items) you must iterate over a copy.
-
+>You can do that freely.
 #### What is the "golden rule" of variable scoping in Python? What is the lifetime of variables?
 >If its possible , do not use global variable.
 #### If you need to access the iterator variable after a for loop, how would you do it in Python?
