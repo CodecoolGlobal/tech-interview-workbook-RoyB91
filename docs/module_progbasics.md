@@ -194,6 +194,7 @@ An exception occurs when an unexpected event happens that requires special proce
 we can tell Python what to do if it does happen. Instead of letting the error crash our program we can intercept it,
 do something about it, and allow the program to continue.
 
+
 #### In which case should we catch an exception? Why?
 >When the program should goes to an error and stop it, or getting wrong input where we have to handle .(register)
 #### How can we handle an exception? What can we and should we do with an exception in the ‘except’ block?
