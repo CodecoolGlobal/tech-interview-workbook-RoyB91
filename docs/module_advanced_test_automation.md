@@ -3,8 +3,57 @@
 ### Testing Basics (ISTQB related)
 
 #### What is the purpose of testing? What is not?
+    Testing verifies that the system meets the different requirements including,
+    functional, performance, reliability, security, usability and so on.
+    This verification is done to ensure that we are building the system right.
+    
+        What is not:
+            -   to ensure the software is not good product
+            -   to blame the developers who wrote the code
+             
 #### What is the difference between Defect, Error, Failure?
+-   Defect:
+     It can be simply defined as a variance between expected and actual. Defect is an error found AFTER the application goes into production.
+     It commonly refers to several troubles with the software products,
+     with its external behavior or with its internal features.
+
+-   Error:
+    An error is a mistake, misconception, or misunderstanding on the part of a software developer.
+    In the category of developer we include software engineers, programmers, analysts, and testers. 
+    
+-   Failure:
+    A failure is the inability of a software system or component to perform its required functions within specified performance requirements.
+    When a defect reaches the end customer it is called a Failure.
+
 #### What are the testing principles?
+-   **Testing shows the presence of defects, not their absence**:
+    -   Testing can show that defects are present, but cannot prove that there are no defects.  
+
+-   **Exhaustive testing is impossible**:
+    -   Testing everything is not possible except for trivial cases.
+    -   Rather than attempting to test exhaustively, risk analysis, test techniques, and priorities should be used to
+        focus test efforts.
+        
+-   **Early testing saves time and money**:
+    -   To find defects early, both static and dynamic test activities should be started as early as possible in the
+        software development lifecycle.
+
+-   **Defects cluster together**:
+    -   Predicted defect clusters, and the actual observed
+        defect clusters in test or operation, are an important input into a risk analysis used to focus the test effort.
+  
+  - **Beware of the pesticide paradox**:
+    -   To detect new defects, existing tests and test data may need changing, and new tests may need to be
+        written.
+    -   In some cases, such as automated regression testing, the pesticide paradox has a
+        beneficial outcome.
+  
+  - **Testing is context dependent**:
+    -   Testing is done differently in different contexts.
+    
+  - **Absence-of-errors is a fallacy**:
+    -   Overall important to give a customer what he/she want , a working products.(not mayor bugs,etc.)
+
 #### What is unit testing? Who is responibile to write unit tests?
 #### What are Test Levels, what is the difference between them?
 #### What is the difference between verification and validation?
