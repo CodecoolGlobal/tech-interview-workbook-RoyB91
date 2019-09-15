@@ -151,9 +151,58 @@ and to identify areas that need more attention.
 ### Reporting, Bugs
 
 #### What steps would you follow when you find a defect?
+Once a bug is found this should be communicated to the developer.
+Before reporting the bug make sure that the bug is well documented with steps to repro,
+conditions under which this bug is occurring,
+how many time it occurs &  the excepted result of the bug.
+The bug report should accurate & complete, so that developer can get the exact failure reason
 #### Talk about common test reports, and about their details.
+    During test monitoring and control, the test manager regularly issues test progress reports for
+    stakeholders. In addition to content common to test progress reports and test summary reports, typical
+    test progress reports may also include:
+-    The status of the test activities and progress against the test plan
+-    Factors impeding progress
+-    Testing planned for the next reporting period
+-    The quality of the test object
+
+    When exit criteria are reached, the test manager issues the test summary report. This report provides a
+summary of the t
 #### What does a bug report contains?
+-   **Bug Title**: This is the title of bug help to identify the bug in one-liner description.
+-   **Bug identifier**: It is auto-generated unique ID helps to identify the bug.
+-   **In the Bug** Tracking Tool, this field is auto-populated.
+-   **Description**: This should cover bug description along with the exact Steps To Reproduce, Expected Result, Actual Result and example.
+-   **Status**: This field indicates the actual status of the bug in the Bug life cycle.
+    -   Here is the list of Bug Statuses in **standard Bug life cycle**:
+        -   New 
+        -   Assigned
+        -   Resolved
+        -   Reopened
+        -  Verified (Vary based on Bug Tracking Tool)
+-   **Bug Assignee**: This is the name of the developer who is responsible to resolve the bug.
+-   **Bug Cc**: Add the manager and lead email address in CC list.
+    In the Bug Tracking Tool, this field is auto-populated based on configuration.
+
+-   **Reported On**: The date on which the bug is occurred & reported the bug.
+-   **Browser**: This field indicates on which browser & version this issue occurs.
+-   **Bug Type**: The bug is categories into a different category like Functional, Navigational, GUI etc.
+-  **Environment**: On which OS, platform this bug occurs.
+-   **Component**: This field indicates the sub-modules of the product.
+-   **Priority**: Urgency to fix the bug?
+    Priority can be set as P1 to P5.
+    -   The P1 means “first fix this bug i.e. priority is highest” and P5 means “No urgent, when get time then fix it”.
+
+-   **Severity**: This tells you about the impact of the bug.
+-   **Types of Severity**:
+    -   Blocker: Unless and until this fix no further testing can be done
+    -   Critical: Application is crashing or Losing the data.
+    -   Major: Major function under test is not working.
+    -   Minor: Minor function under test is not working.
+    -   Trivial: UI issues
+    -   Enhancement: Asking for new changes as an enhancement.
+
 #### How would you prioritize a bug?
+Depend on the severity , what kind of bug is this?(Compared to a product)
 
 ### Test Automation, Selenium
 
