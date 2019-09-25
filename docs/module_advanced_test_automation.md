@@ -166,7 +166,9 @@ The bug report should accurate & complete, so that developer can get the exact f
 -    The quality of the test object
 
     When exit criteria are reached, the test manager issues the test summary report. This report provides a
-summary of the t
+    
+    summary of the test.
+
 #### What does a bug report contains?
 -   **Bug Title**: This is the title of bug help to identify the bug in one-liner description.
 -   **Bug identifier**: It is auto-generated unique ID helps to identify the bug.
@@ -207,10 +209,65 @@ Depend on the severity , what kind of bug is this?(Compared to a product)
 ### Test Automation, Selenium
 
 #### Which test cases should be be automated and which shouldn't?
++   Do's:
+    +   DO automate tasks as close to the code as possible
+    +   DO automate repetitive tasks
+    +   DO automate things users will do every day
+    +   DO automate basic smoke-level tests
+    +   DO automate things that will save you time
+    +   DO automate things that will allow you to exercise lots of different options
+    +   DO automate things that will alert you when something is wrong
+-   Don't:
+    -   DON’T automate tests that you know will be flaky
+    -   DON’T automate tests for features that are in the early stages and are expected to go through many changes
+    -   DON’T automate tests for features that no one cares about
+    -   DON’T automate weird edge cases
+    -   DON’T automate bugs you are sure will never be seen again
 #### Describe a good automated test!
+-   **Simple**
+-   **Modular**
+-   **Reliable**
+-  **Reusable**
+-  **Maintainable**
+-  **Documented**
+-  **Independent & Self-sufficient**
 #### What is Selenium, Selenium IDE, Selenium WebDriver?
+-   Selenium is an open source tool which is used for automating the tests carried out on web browsers.
+    **Only testing of web applications is possible with Selenium**. 
+    
+-   We **can neither** test **any desktop (software) application** **nor** test **any mobile application** using Selenium.
+
+-   Selenium IDE:
+    -   By using selenium IDE user can record and playback test cases in a browser.
+    
+-   Selenium WebDriver:
+    -   Selenium WebDriver tool is used to automate web application testing to verify that it works as expected. It supports many browsers such as Firefox, Chrome, IE, and Safari.
+    -   also supports different programming languages such as C#, Java, Perl, PHP and Ruby for writing test scripts.
+    -   is platform-independent since the same code can be used on different Operating Systems
+    -    By using different jar files, we can also test API, Database Test etc. using Selenium WebDriver.    
 #### How can be web elements identified?
+-   selector
+-   Xpath
+-   jsPath
+-   outerHTML 
 #### How can you wait for elements, what can go wrong? Collect possible errors and root causes.
+-   Implicit Wait:
+    -   ``` driver.manage().timeouts().implicitlyWait(TimeOut, TimeUnit.SECONDS);```
+-   Explicit Wait:
+    -   ``` WebDriverWait wait = new WebDriverWait(WebDriverRefrence,TimeOut);```
+-   Fluent Wait:
+    -   ```
+        Wait wait = new FluentWait(WebDriver reference)
+        .withTimeout(Duration.ofSeconds(SECONDS))
+        .pollingEvery(Duration.ofSeconds(SECONDS))
+        .ignoring(Exception.class);
+        ```
+        
+ -  Most of the web applications are developed using Ajax and Javascript. When a page is loaded by the browser the elements which we want to interact with may load at different time intervals.
+ 
+-   Some errors:
+    -   "ElementNotVisibleException"
+    -   "NoSuchElementException"
 #### Compare POM and Keyword Driven Testing!
 #### Whats the difference between TDD and BDD?
 #### What is API testing and why would you use that?
