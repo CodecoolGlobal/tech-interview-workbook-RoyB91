@@ -278,7 +278,21 @@ Depend on the severity , what kind of bug is this?(Compared to a product)
     
     -   Tests can be developed without programming knowledge
 
+
 -   POM:
+    -   Page Object Model is a design pattern to create Object Repository for web UI elements. Under this model, for each web page in the application, there should be corresponding page class. This Page class will find the WebElements of that web page and also contains Page methods which perform operations on those WebElements.
+        
+    -   It helps make the code more readable, maintainable, and reusable.
+    
+    -   Page Object Pattern says operations and flows in the UI should be separated from verification.
+    
+    -   Page Object Model is an Object Repository design pattern in Selenium WebDriver.
+   
+    -   POM creates our testing code maintainable, reusable.
+   
+    -   Page Factory is an optimized way to create object repository in POM concept.
+  
+    -   AjaxElementLocatorFactory is a lazy load concept in Page Factory pattern to identify WebElements only when they are used in any operation.
 
     
 #### Whats the difference between TDD and BDD?
@@ -286,6 +300,8 @@ Depend on the severity , what kind of bug is this?(Compared to a product)
 #### What is Data Driven Testing and why is it useful?
 -   **Data Driven Testing** framework resolves this problem by keeping the data separate from Functional tests.**The same test script can execute for different combinations of input test** data and generate test results.
 
+-   Data-driven is a test automation framework which stores test data in a table or spread spreadsheet format.
+    
 -   **Frequently we have multiple data sets which we need to run the same tests on. To create an individual test for each data set is a lengthy and time-consuming process.**
 
 -   Data Driven Testing framework resolves this problem by keeping the data separate from Functional tests. The same test script can execute for different combinations of input test data and generate test results.
