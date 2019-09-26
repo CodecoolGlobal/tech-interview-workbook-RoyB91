@@ -269,9 +269,26 @@ Depend on the severity , what kind of bug is this?(Compared to a product)
     -   "ElementNotVisibleException"
     -   "NoSuchElementException"
 #### Compare POM and Keyword Driven Testing!
+-   Keyword Driven Testing(**KDT**):
+    -   In Keyword Driven Testing, you first identify a set of keywords and then associate an action (or function) related to these keywords. Here, every testing action like opening or closing of browser, mouse click, keystrokes, etc. is described by a keyword such as openbrowser, click, Typtext and so on.
+    
+    -   A keyword-driven testing is a scripting technique that uses data files to contain the keywords related to the application being tested
+    
+    -   A keyword-driven testing usually performed by automated testing.
+    
+    -   Tests can be developed without programming knowledge
+
+-   POM:
+
+    
 #### Whats the difference between TDD and BDD?
 #### What is API testing and why would you use that?
 #### What is Data Driven Testing and why is it useful?
+-   **Data Driven Testing** framework resolves this problem by keeping the data separate from Functional tests.**The same test script can execute for different combinations of input test** data and generate test results.
+
+-   **Frequently we have multiple data sets which we need to run the same tests on. To create an individual test for each data set is a lengthy and time-consuming process.**
+
+-   Data Driven Testing framework resolves this problem by keeping the data separate from Functional tests. The same test script can execute for different combinations of input test data and generate test results.
 #### What are the challenges and best practices with dynamically loading web elements?
 #### What are the challenges of Mobile Test Automation?
 
