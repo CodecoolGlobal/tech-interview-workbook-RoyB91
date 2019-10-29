@@ -306,6 +306,13 @@ Depend on the severity , what kind of bug is this?(Compared to a product)
 
 -   Data Driven Testing framework resolves this problem by keeping the data separate from Functional tests. The same test script can execute for different combinations of input test data and generate test results.
 #### What are the challenges and best practices with dynamically loading web elements?
+-   Using Wait's in the right place.
+-   Relative XPath with Starting Text; **/button[starts-with(@id, ’text-’)]**
+-   Relative XPath with Text Contains; **//button[contains(@class, ‘classname’)]**
+-   Relative XPath with Multiple Attribute;**//button[contains(@id,’idname-’)] [contains(@class, ‘classname-Class-text’)]**
+-   Relative XPath with Following or Preceding Node
+    The following includes all the nodes that follow the context node. We can apply ‘following’ to specify the following elements in the web element list.
+
 #### What are the challenges of Mobile Test Automation?
 
 ### Advanced Topics
