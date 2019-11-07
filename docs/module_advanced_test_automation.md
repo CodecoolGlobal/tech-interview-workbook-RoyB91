@@ -318,7 +318,66 @@ Depend on the severity , what kind of bug is this?(Compared to a product)
 ### Advanced Topics
 
 #### What is the difference between CI and CD?
+-   **Continuous Integration (CI)**: short-lived feature branches, team is merging to master branch multiple times per day,
+fully automated build and test process which gives feedback within 10 minutes; deployment is manual.
+
+-   **Continuous Delivery (CD)**: **CI** + the entire software release process is automated, it may be composed of multiple stages,
+and deployment to production is manual.
+
+-   **Continuous Deployment**:  **CI + CD** + **fully automated deployment** to production.
+
 #### Describe a Continuous Delivery!
+-   **Continuous Delivery (CD)**: **CI** + the entire software release process is automated, it may be composed of multiple stages,
+and deployment to production is manual.
+
 #### Compare 2 popular CI systems, one of them should be Jenkins!
+-   **Jenkins** is an open-source continuous integration tool. It is written using the Java programming language.
+It facilitates real-time testing and reporting on isolated changes in a larger code base.
+This software helps developers to quickly find and solve defects in their code base & automate testing of their builds.
+-   Features:
+
+    +   Provide support to scale out to a large number of nodes and distribute the workload equally among them
+    +   Easily updated with all OS and versions of Linux, Mac OS or Windows
+    +   It offers easy installation as Jenkins comes as a WAR file all you need to drop into your JEE container and your setup up ready to run.
+    +   Jenkins can be easily set up and configured with the help of its web interface
+    +   It's can easily distribute work across several machines,
+
+-   **Bitbucket** is a web-based version control repository hosting service owned by Atlassian,
+for source code and development projects that use either Mercurial
+(since launch till June 1, 2020) or Git (since October 2011) revision control systems.
+    +   Bitbucket has three deployment models: Cloud, Bitbucket Server, and Data Center.
+    +   Bitbucket is mostly used for code and code review. Bitbucket supports the following features:
+    +   Pull requests with code review and comments
+    +   Bitbucket Pipelines
+    +   2 step verification and required two step verification
+    +   Merge Checks
+    +   Code search (Alpha)
+    +   Git Large File Storage (LFS)
+    +   Documentation, including automatically rendered README files in a variety of Markdown-like file formats
+    +   Issue tracking
+    +   Add-ons and integrations
+    +   REST APIs to build third party applications which can use any development language
+    +   Snippets that allow developers to share code segments or files
+ 
 #### What is Docker, why is it useful?
-#### Compare 2 popular Test Automation IDE, one of them should be Katalon Studio!
+
++   **Docker** is a tool designed to make it easier to create, deploy, and run applications by using containers.
+Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies,
+and ship it all out as one package.
+
+
++   Why:
+    +   *With Docker, developers can focus on writing code without worrying about the system on which their code will run.
+     Applications become truly portable. You can repeatably run your application on any other machine running Docker with confidence.
+     For operations staff, Docker is lightweight, easily allowing the running and management of applications with different requirements
+     side by side in isolated containers.
+     This flexibility can increase resource use per server and may reduce the number of systems needed because of its lower overhead,
+     which in turn reduces cost.*
+    +   **consistency, speed and isolation**
+        +   **By consistency**, I mean that Docker provides a consistent environment for your application from development
+               all the way through production– you run from the same starting point every time.
+        +  **By speed**, I mean you can rapidly run a new process on a server. Because the image is preconfigured and installed
+             with the process you want to run,it takes the challenge of running a process out of the equation.
+        +   **By isolation**, I mean that by default each Docker container that’s running is isolated from the network,
+             the file system and other running processes.
+### Compare 2 popular Test Automation IDE, one of them should be Katalon Studio!
