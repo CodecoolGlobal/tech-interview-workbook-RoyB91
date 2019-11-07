@@ -296,7 +296,41 @@ Depend on the severity , what kind of bug is this?(Compared to a product)
 
     
 #### Whats the difference between TDD and BDD?
+
+-   **In TDD** (Test Driven Development), the test is written to check the implementation of functionality,
+but as the code evolves, tests can give false results.
+-   **BDD** (Behavior Driven Development) is also a test-first approach, but differs by testing the actual
+behavior of the system from the end users perspective.
+
+
+
+
+Although we say BDD is a better approach, we must not forget that BDD has actually evolved from TDD,
+as a way to eliminate the shortfalls of TDD. So there is absolutely no harm in implementing both approaches – one
+to support the quality of the code the developer writes,
+and the other to support the behavior of the system defined by the product owner.
 #### What is API testing and why would you use that?
+**API testing** is a type of software testing that involves testing application programming interfaces (APIs) directly
+and as part of integration testing to determine if they meet expectations for functionality, reliability, performance, and security.
+Since APIs lack a GUI, API testing is performed at the message layer.
+
+**Why should we use that**:
+-   **Earlier Testing** -
+    -   With API testing, once the logic is designed, tests can be built to validate the correctness in responses and data. We don't have to wait for various teams to finish their work or for full applications
+        to be built - test cases are isolated and ready to built immediately.
+        
+- **Easier Test Maintenance** -
+    -   UIs are constantly changing and moving around based on how they are accessed - browsers, devices, screen orientation, etc.
+     This creates a nightmare scenario where tests are being constantly rewritten to keep up with the actual code in production.
+     API changes are much more controlled and infrequent- 
+     often times API definitions files like OpenAPI Spec can help make refactoring tests only a seconds of work.
+-   **Faster Time To Resolution**-
+    - When API tests fail, we know exactly where our system broke and where the defect can be found.
+     This helps reduce time triaging bugs between builds, integrations, and even different team-members.
+     The small, isolated footprint of an API test is perfect for faster MTTR stats, a valuable KPI for DevOps teams.
+     
+- **Speed and Coverage of Testing** -
+    -   300 UI tests may take 30 hours to run. 300 API tests could be run in 3 minutes. That means you’ll find more bugs in less time, while also being about to fix them immediately.
 #### What is Data Driven Testing and why is it useful?
 -   **Data Driven Testing** framework resolves this problem by keeping the data separate from Functional tests.**The same test script can execute for different combinations of input test** data and generate test results.
 
