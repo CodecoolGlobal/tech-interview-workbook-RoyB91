@@ -41,9 +41,9 @@
         software development lifecycle.
 
 -   **Defects cluster together**:
-    -   Predicted defect clusters, and the actual observed
-        defect clusters in test or operation, are an important input
-        into a risk analysis used to focus the test effort.
+    -   Defect Clustering in Software Testing means that the majority of the defects are caused by a small number of modules, i.e. the distribution of defects are not across the application but rather centralized in limited sections of the application.
+    
+    -   Defect Clustering in Software Testing is based on the Pareto principle, also known as the 80-20 rule, where it is stated that approximately 80% of the problems are caused by 20% of the modules.
   
   - **Beware of the pesticide paradox**:
     -   To detect new defects, existing tests and test data may need changing, and new tests may need to be
@@ -297,8 +297,7 @@ Depend on the severity , what kind of bug is this?(Compared to a product)
     
 #### Whats the difference between TDD and BDD?
 
--   **In TDD** (Test Driven Development), the test is written to check the implementation of functionality,
-but as the code evolves, tests can give false results.
+-   **In TDD** (Test Driven Development); új funkció implementálása előtt írjuk meg, automatizált testeket.
 -   **BDD** (Behavior Driven Development) is also a test-first approach, but differs by testing the actual
 behavior of the system from the end users perspective.
 
