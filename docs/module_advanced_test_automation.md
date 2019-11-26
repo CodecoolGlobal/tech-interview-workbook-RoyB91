@@ -354,8 +354,7 @@ Since APIs lack a GUI, API testing is performed at the message layer.
 -   **Continuous Integration (CI)**: short-lived feature branches, team is merging to master branch multiple times per day,
 fully automated build and test process which gives feedback within 10 minutes; deployment is manual.
 
--   **Continuous Delivery (CD)**: **CI** + the entire software release process is automated, it may be composed of multiple stages,
-and deployment to production is manual.
+-   **Continuous Delivery (CD)**:  is a software engineering approach in which teams produce software in short cycles, ensuring that the software can be reliably released at any time and, when releasing the software, doing so manually. It aims at building, testing, and releasing software with greater speed and frequency.
 
 -   **Continuous Deployment**:  **CI + CD** + **fully automated deployment** to production.
 
