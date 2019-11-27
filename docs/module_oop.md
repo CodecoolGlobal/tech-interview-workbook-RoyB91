@@ -164,16 +164,36 @@ The class from which the subclass is derived is called a superclass (also a base
 Overload adds more functionality to an already existing method, overriding redefines the method functionality.
 #### What are the Object Oriented Principles? Explain the concepts with realistic examples!
 OO principles: encapsulation (data hiding), inheritance, polymorphism, abstraction
- - encapsulation:
- - inheritance:
- - polymorphism:
- - abstraction:
+ - **encapsulation**:
+    -    **Wrapping up data member and method together into a single unit (i.e. Class)**
+    -   Also it is a language mechanism for **restricting access to some components**
+    (this can be achieved by access modifiers like private,protected etc.)
+ - **inheritance**:
+    -   **Inheritances expresses “is-a” and/or “has-a” relationship between two objects.** 
+    -   Inheritance can be defined as the process where one class acquires the properties (methods and fields) of another. 
+    -   In Java, concept of “is-a” is based on class inheritance (using extends) or interface implementation (using implements).
+ - **polymorphism**:
+    -   **It means one name many forms. It is further of two types — static and dynamic.**
+     -  **Static polymorphism** 
+       is achieved using method *overloading* and **dynamic polymorphism** using method *overriding*. 
+     -  It is closely related to inheritance. We can write a code that works on the superclass,
+     and it will work with any subclass type as well.
+ - **abstraction**:
+    -   **Abstraction is the process of hiding the implementation details**.
+     When we want to use another object, most of the time **we only need
+     the information** on **what that object does instead of how it does it**.
+    -   *In a way, one class should not know the inner details of another in order to use it, 
+    just knowing the interfaces should be good enough.*
+    
+    -   is hiding the information or providing only necessary details to the client.
+        
+        e.g Car Brakes- You just know that pressing the pedals will stop the vehicle but you don't need to know how it works internally.
 #### What is method overloading?
  A type of polymorphism. Method overloading means that there are several methods present,
-   in a class having the same name but different types/order/number of parameters.
+   in a class having the same name but different types/order/number of parameters.(compile time (static)polymorphism)
 #### What is method overriding?
 A type of polymorphism. Method overriding means that a subclass has the same method as its super (same name, types/order/number of parameters),
- but with a different method body.
+ but with a different method body.(runtime polymorphism)
 #### Explain how object oriented languages attempt to simplify memory management for Programmers.
 The purpose of garbage collection is to identify and discard objects that are no longer needed by a program so that their resources can be reclaimed and reused.
 A Java object is subject to garbage collection when it becomes unreachable to the program in which it is used.
@@ -191,7 +211,39 @@ Simply put, OOP focuses on the objects that developers want to manipulate rather
  6. Perform cloning of objects in the getter methods to return a copy rather than returning the actual object reference.
 #### How many instances can be created for an abstract class?
 None, an abstract class cannot be instantiated. (related:  anonymous subclasses)
+#### Describe SOLID PRINCIPLES
+-   **Single responsibility principle**
+    -   A class should only have a single responsibility, that is, only changes to one part of the software's specification
+        should be able to affect the specification of the class.
+-   **Open-Closed Principle**
+    -   You should be able to extend a class’s behavior, without modifying it.
+        This principle is the foundation for building code that is maintainable and reusable.
+        -   Open for extension
+            This ensures that the class behavior can be extended. 
+        -   Closed for modification
+            The source code of such a class is set in stone, no one is allowed to make changes to the code.
+        -   **How do we achieve this?**
+            
+            **Through abstractions.**
+-   **Liskov Substitution Principle**
+    -   Enables you to replace objects of a parent class with objects of a subclass without breaking the application.
+     **This requires all subclasses to behave in the same way as the parent class**. To achieve that, your subclasses need to follow these rules:            
+        -   Don’t implement any stricter validation rules on input parameters than implemented by the parent class.
+        -    Apply at the least the same rules to all output parameters as applied by the parent class.   
+        
+-   **Interface Segregation Principle**
+    -   it is better to have many smaller interfaces, than fewer, fatter interfaces.
 
+-   **Dependency Inversion Principle**
+    -   Entities must depend on abstractions not on concretions. It states that the high level module must not depend on the low level module,
+     but they should depend on abstractions.
+    -    Dependency Inversion increases the reusability and flexibility of our code.
+            
+        
+        
+        
+        
+             
 ## Programming languages
 
 ### Java
