@@ -238,10 +238,19 @@ None, an abstract class cannot be instantiated. (related:  anonymous subclasses)
     -   Entities must depend on abstractions not on concretions. It states that the high level module must not depend on the low level module,
      but they should depend on abstractions.
     -    Dependency Inversion increases the reusability and flexibility of our code.
-            
-        
-        
-        
+                
+####    When to use an abstract class vs. interface 
+-   The short answer:
+    -   **An abstract class** allows you to create functionality that subclasses can implement or override.
+        -   You want to share code among several closely related classes.
+        -    You expect that classes that extend your abstract class have many common methods or fields or require access modifiers other than public (such as protected and private).
+        -   You want to declare non-static or non-final fields. This enables you to define methods that can access and modify the state of the object to which they belong.
+    
+    -   **An interface** only allows you to define functionality,
+ not implement it. And whereas a class can extend only one abstract class, it can take advantage of multiple interfaces.        
+        - You expect that unrelated classes would implement your interface. For example, the interfaces Comparable and Cloneable are implemented by many unrelated classes.
+        -  You want to specify the behavior of a particular data type, but not concerned about who implements its behavior.
+        - You want to take advantage of multiple inheritances.
         
              
 ## Programming languages
